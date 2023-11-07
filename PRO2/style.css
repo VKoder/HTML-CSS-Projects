@@ -1,0 +1,83 @@
+*{
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0%;
+}
+body{
+    background-color: #ccc;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.applybox{
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px ;
+    border-radius: 10px;
+    background-color: rgb(214, 141, 229);
+}
+span{
+    font-size: 20px;
+}
+.form_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+}
+
+input,select,textarea{
+    padding: 8px 10px;
+    margin: 1px 0;
+    border: 1px solid rgb(232, 255, 250);
+    border-radius: 4px;
+    font-size: 15px;
+}
+label{
+    margin-bottom: 2px;
+}
+input:focus{
+    outline-color: red;
+}
+.btn-con{
+    display:flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+button{
+    background-color: red;
+    color: white;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+button:hover{
+    background-color: gray;
+    border: 2px solid red;
+    transition: 0.4s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.txtarea_control{
+   grid-column: 1 /span 2; 
+}
+
+.txtarea_control textarea{
+    width: 100%;
+}
+
+/* agar max-width 460 aata hai to media query fire hogi that is vho chota hojayega */
+
+@media (max-width: 460px){
+    .txtarea_control{
+        grid-column: 1 /span 1; 
+     }
+}
